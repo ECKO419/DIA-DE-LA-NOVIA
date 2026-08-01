@@ -16,7 +16,7 @@ body{
 
     align-items:center;
 
-    overflow:hidden;
+    overflow-y:auto;
 
     font-family:'Arial', sans-serif;
 
@@ -32,6 +32,10 @@ body{
     width:100%;
 
     max-width:700px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
 
     text-align:center;
 
@@ -153,13 +157,26 @@ button:hover{
 }
 
 
-/* Ajustes específicos para teléfonos */
+/* Ajustes para teléfonos */
 
 @media(max-width:600px){
 
+    body{
+
+        align-items:flex-start;
+
+        padding:15px;
+
+    }
+
+
     .contenedor{
 
+        margin-top:20px;
+
         padding:25px 18px;
+
+        max-height:none;
 
     }
 
@@ -167,6 +184,13 @@ button:hover{
     h1{
 
         margin-bottom:15px;
+
+    }
+
+
+    p{
+
+        font-size:18px;
 
     }
 
