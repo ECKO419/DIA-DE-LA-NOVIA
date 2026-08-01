@@ -4,6 +4,7 @@
     box-sizing:border-box;
 }
 
+
 body{
 
     background:linear-gradient(135deg,#0f172a,#312e81,#be185d);
@@ -14,9 +15,11 @@ body{
 
     justify-content:center;
 
-    align-items:center;
+    align-items:flex-start;
 
-    overflow:hidden;
+    overflow-x:hidden;
+
+    overflow-y:auto;
 
     font-family:'Arial', sans-serif;
 
@@ -27,11 +30,15 @@ body{
 }
 
 
+/* Contenedor principal */
+
 .contenedor{
 
     width:100%;
 
     max-width:700px;
+
+    margin-top:20px;
 
     text-align:center;
 
@@ -50,6 +57,8 @@ body{
 }
 
 
+/* Título */
+
 h1{
 
     font-size:clamp(32px,6vw,55px);
@@ -61,16 +70,20 @@ h1{
 }
 
 
+/* Mensaje */
+
 p{
 
     font-size:clamp(18px,4vw,24px);
 
-    line-height:1.5;
+    line-height:1.6;
 
     margin-bottom:30px;
 
 }
 
+
+/* Botón */
 
 button{
 
@@ -102,9 +115,11 @@ button:hover{
 }
 
 
+/* Corazones */
+
 .corazon{
 
-    position:absolute;
+    position:fixed;
 
     color:#ff6fa5;
 
@@ -115,6 +130,8 @@ button:hover{
 }
 
 
+/* Animación corazones */
+
 @keyframes subir{
 
     from{
@@ -124,6 +141,7 @@ button:hover{
         opacity:1;
 
     }
+
 
     to{
 
@@ -136,6 +154,8 @@ button:hover{
 }
 
 
+/* Brillo del título */
+
 @keyframes brillo{
 
     from{
@@ -143,6 +163,7 @@ button:hover{
         text-shadow:0 0 10px pink;
 
     }
+
 
     to{
 
@@ -153,11 +174,22 @@ button:hover{
 }
 
 
-/* Ajustes específicos para teléfonos */
+
+/* Ajustes para celulares */
 
 @media(max-width:600px){
 
+
+    body{
+
+        padding:15px;
+
+    }
+
+
     .contenedor{
+
+        margin-top:10px;
 
         padding:25px 18px;
 
@@ -166,7 +198,14 @@ button:hover{
 
     h1{
 
-        margin-bottom:15px;
+        font-size:32px;
+
+    }
+
+
+    p{
+
+        font-size:18px;
 
     }
 
@@ -174,6 +213,8 @@ button:hover{
     button{
 
         width:90%;
+
+        padding:14px;
 
     }
 
